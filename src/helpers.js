@@ -1,3 +1,8 @@
+// Pretend function to slow things down
+export const pretendWait = () =>
+  new Promise((res) => setTimeout(res, Math.random() * 2000));
+
+// Colors generator
 const generateRandomColor = () => {
   const existingBudgetLength = fetchData("budgets")?.length ?? 0;
   return `${existingBudgetLength * 34} 65% 50%`;

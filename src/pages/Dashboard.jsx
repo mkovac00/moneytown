@@ -9,7 +9,7 @@ import Intro from "../components/Intro";
 import AddBudgetForm from "../components/AddBudgetForm";
 
 // Helper functions
-import { createBudget, fetchData } from "../helpers";
+import { createBudget, fetchData, pretendWait } from "../helpers";
 
 // Loader function
 export function dashboardLoader() {
@@ -20,6 +20,8 @@ export function dashboardLoader() {
 
 // Action functions
 export async function dashboardAction({ request }) {
+  await pretendWait();
+
   const data = await request.formData();
   const { _action, ...values } = Object.fromEntries(data);
 
