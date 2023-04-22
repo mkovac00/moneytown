@@ -1,6 +1,6 @@
 // Pretend function to slow things down
 export const pretendWait = () =>
-  new Promise((res) => setTimeout(res, Math.random() * 2000));
+  new Promise((res) => setTimeout(res, Math.random() * 1000));
 
 // Colors generator
 const generateRandomColor = () => {
@@ -80,4 +80,8 @@ export const formatCurrency = (amount) => {
     style: "currency",
     currency: "EUR",
   });
+};
+
+export const formatDateToLocaleString = (epoch) => {
+  new Date(epoch).toLocaleDateString();
 };
