@@ -94,5 +94,5 @@ export const formatCurrency = (amount) => {
 };
 
 export const formatDateToLocaleString = (epoch) => {
-  new Date(epoch).toLocaleDateString();
+  return new Date(epoch).toLocaleDateString();
 };
